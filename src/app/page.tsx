@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CustomCursor from "@/components/CustomCursor";
 import CleanNavbar from "@/components/CleanNavbar";
 import CleanHero from "@/components/CleanHero";
@@ -16,9 +16,25 @@ import Preloader from "@/components/Preloader";
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+  const handlePreloaderFinish = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+    setLoaded(true);
+  };
+
   return (
     <>
-      <Preloader onFinish={() => setLoaded(true)} />
+      <Preloader onFinish={handlePreloaderFinish} />
 
       <main
         className="min-h-screen bg-[#070709] text-[#f4f4f5] selection:bg-white selection:text-black font-sans relative overflow-hidden"

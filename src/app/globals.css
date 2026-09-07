@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Great+Vibes&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   GLOBAL: Handwritten everywhere
+   Body  → Caveat (legible, casual script)
+   h1/h2/h3 → Great Vibes (elegant cursive)
+   mono  → Space Grotesk (kept for code)
+───────────────────────────────────────── */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  * {
+    font-family: 'Caveat', cursive;
+  }
+
+  body {
+    background-color: #070709;
+    color: #f4f4f5;
+    font-family: 'Caveat', cursive;
+    font-size: 1.08rem;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+  }
+
+  input, textarea, button, a, p, span, li, label, div {
+    font-family: 'Caveat', cursive;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070709;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Mono / Code — keep Space Grotesk for readability */
+.font-mono,
+pre,
+code,
+kbd {
+  font-family: 'Space Grotesk', 'Fira Code', ui-monospace, monospace !important;
+  font-size: 0.9em;
+}
+
+/* ── Utility Classes ── */
+
+/* Force Great Vibes signature on any element */
+.font-signature {
+  font-family: 'Great Vibes', cursive !important;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Force Caveat handwritten on any element */
+.font-handwritten {
+  font-family: 'Caveat', cursive !important;
+}
+
+/* Prismatic Glass Cards */
+.nivora-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 1.5rem;
+  box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.18), 0 20px 45px -15px rgba(0,0,0,0.7);
+  transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.nivora-card:hover {
+  border-color: rgba(255,255,255,0.25);
+  box-shadow: inset 0 1px 2px 0 rgba(255,255,255,0.3), 0 25px 50px -10px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.06);
+  transform: translateY(-3px);
+}
+
+/* White gradient text */
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Signature glow – soft white */
+.signature-glow {
+  text-shadow:
+    0 0 30px rgba(255,255,255,0.5),
+    0 0 70px rgba(255,255,255,0.18),
+    0 2px 10px rgba(0,0,0,0.7);
+}
+
+/* Subtle white text glow */
+.text-glow {
+  text-shadow:
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 40px rgba(255,255,255,0.15);
+}

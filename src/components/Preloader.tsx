@@ -221,24 +221,6 @@ export default function Preloader({ onFinish }: { onFinish: () => void }) {
               />
             </svg>
           </div>
-
-          {/* Corner stamps */}
-          {(
-            [
-              ["top-5 left-6", "GC / 2026"],
-              ["top-5 right-6", "SIH WINNER"],
-              ["bottom-5 left-6", "PORTFOLIO v2"],
-              ["bottom-5 right-6", "NEXT.JS 16"],
-            ] as [string, string][]
-          ).map(([pos, label]) => (
-            <div
-              key={label}
-              className={`absolute ${pos} text-[10px] text-zinc-800 tracking-[0.2em] uppercase`}
-              style={{ fontFamily: "'Space Grotesk', monospace" }}
-            >
-              {label}
-            </div>
-          ))}
         </motion.div>
       )}
     </AnimatePresence>

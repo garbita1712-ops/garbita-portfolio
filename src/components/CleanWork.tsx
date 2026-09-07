@@ -172,7 +172,7 @@ export function executeStudio(snippet: string) {
                 {/* Card Content Body */}
                 <div className="p-8 space-y-6 flex-1 flex flex-col justify-between">
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2">
                       <div className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                         <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest">
@@ -180,7 +180,7 @@ export function executeStudio(snippet: string) {
                         </span>
                       </div>
                       <span
-                        className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-white/10 text-white border border-white/15"
+                        className="px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-white/10 text-white border border-white/15 whitespace-nowrap shrink-0"
                       >
                         {project.tag}
                       </span>

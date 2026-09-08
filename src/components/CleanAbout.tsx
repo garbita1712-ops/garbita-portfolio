@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Sparkles, Download } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Sparkles, Download, FileText } from "lucide-react";
 
 export default function CleanAbout() {
   return (
@@ -87,14 +87,14 @@ export default function CleanAbout() {
               </a>
 
               <a
-                href="/Garbita_Chowdhury_Resume.pdf"
-                download="Garbita_Chowdhury_Resume.pdf"
+                href="https://res.cloudinary.com/dlrlet9fg/image/upload/v1788843369/resume_Garbita-1_vipyo9.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-zinc-900 border border-white/15 text-white text-xs font-mono hover:bg-zinc-800 transition-colors flex items-center gap-2"
+                className="px-6 py-3 rounded-full bg-zinc-900 border border-white/15 text-white text-xs font-mono hover:bg-zinc-800 transition-colors flex items-center gap-2 cursor-pointer"
               >
-                <Download className="w-3.5 h-3.5 text-zinc-300" />
-                <span>Download Resume</span>
+                <FileText className="w-3.5 h-3.5 text-zinc-300" />
+                <span>View Resume</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
               </a>
 
               <div className="flex items-center gap-2 font-mono text-xs text-zinc-400">

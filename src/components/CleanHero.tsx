@@ -74,14 +74,13 @@ export default function CleanHero() {
           </a>
 
           <a
-            href="/Garbita_Chowdhury_Resume.pdf"
-            download="Garbita_Chowdhury_Resume.pdf"
+            href="https://res.cloudinary.com/dlrlet9fg/image/upload/v1788843369/resume_Garbita-1_vipyo9.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 sm:px-7 sm:py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white text-xs sm:text-sm font-semibold hover:bg-white/10 hover:border-white/40 transition-colors flex items-center space-x-2 shadow-xl font-mono"
+            className="px-6 py-3 sm:px-7 sm:py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white text-xs sm:text-sm font-semibold hover:bg-white/10 hover:border-white/40 transition-colors flex items-center space-x-2 shadow-xl font-mono cursor-pointer"
           >
             <span>Resume</span>
-            <Download className="w-4 h-4 text-white" />
+            <ArrowUpRight className="w-4 h-4 text-white" />
           </a>
         </motion.div>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Sparkles, Download } from "lucide-react";
+import { ArrowUpRight, Sparkles, Download, FileText } from "lucide-react";
 import Github from "./GithubIcon";
 import Linkedin from "./LinkedinIcon";
 
@@ -141,17 +141,17 @@ export default function CleanNavbar() {
               <Linkedin className="w-4 h-4" />
             </a>
 
-            {/* Resume Download Button */}
+            {/* Resume Button - Opens in new tab */}
             <a
-              href="/Garbita_Chowdhury_Resume.pdf"
-              download="Garbita_Chowdhury_Resume.pdf"
+              href="https://res.cloudinary.com/dlrlet9fg/image/upload/v1788843369/resume_Garbita-1_vipyo9.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/15 hover:border-white/30 text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm whitespace-nowrap flex-shrink-0"
-              title="Download Resume (PDF)"
+              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/15 hover:border-white/30 text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm whitespace-nowrap flex-shrink-0 cursor-pointer"
+              title="View Resume (PDF)"
             >
-              <Download className="w-3.5 h-3.5 text-zinc-300 flex-shrink-0" />
+              <FileText className="w-3.5 h-3.5 text-zinc-300 flex-shrink-0" />
               <span className="font-mono whitespace-nowrap">Resume</span>
+              <ArrowUpRight className="w-3 h-3 text-zinc-400 -ml-0.5" />
             </a>
 
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-shrink-0">
@@ -255,14 +255,15 @@ export default function CleanNavbar() {
               {/* Drawer Footer CTA */}
               <div className="space-y-3 pt-6 border-t border-white/10">
                 <a
-                  href="/Garbita_Chowdhury_Resume.pdf"
-                  download="Garbita_Chowdhury_Resume.pdf"
+                  href="https://res.cloudinary.com/dlrlet9fg/image/upload/v1788843369/resume_Garbita-1_vipyo9.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-2xl bg-zinc-900 border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg"
+                  onClick={() => setMobileOpen(false)}
+                  className="w-full py-3 rounded-2xl bg-zinc-900 border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg cursor-pointer"
                 >
-                  <Download className="w-4 h-4 text-white" />
-                  <span>Download Resume (PDF)</span>
+                  <FileText className="w-4 h-4 text-white" />
+                  <span>View Resume</span>
+                  <ArrowUpRight className="w-4 h-4 text-zinc-400" />
                 </a>
 
                 <Link

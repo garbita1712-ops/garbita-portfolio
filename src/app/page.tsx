@@ -9,6 +9,7 @@ import CleanAbout from "@/components/CleanAbout";
 import CleanWork from "@/components/CleanWork";
 import CodeShowcase from "@/components/CodeShowcase";
 import CleanSkills from "@/components/CleanSkills";
+import AchievementsTimeline from "@/components/AchievementsTimeline";
 import NivoraContact from "@/components/NivoraContact";
 import NivoraFooter from "@/components/NivoraFooter";
 import Preloader from "@/components/Preloader";
@@ -68,7 +69,10 @@ export default function Home() {
         {/* 06 / Categorized Technical Stack */}
         <CleanSkills />
 
-        {/* 07 / Direct Contact */}
+        {/* 07 / Chronology of Achievements & Milestones */}
+        <AchievementsTimeline />
+
+        {/* 08 / Direct Contact */}
         <NivoraContact />
 
         {/* Footer */}

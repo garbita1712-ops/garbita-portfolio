@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Sparkles, Terminal } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Download } from "lucide-react";
 
 export default function CleanHero() {
   return (
@@ -47,7 +47,7 @@ export default function CleanHero() {
           transition={{ delay: 0.2 }}
           className="text-zinc-300 text-base sm:text-2xl font-light leading-relaxed max-w-2xl"
         >
-          Building production Next.js 16 web applications, scalable platforms, and cross-platform mobile dashboards.
+          Building scalable full-stack web applications, modern responsive frontends, and high-performance backend architectures.
         </motion.p>
 
         {/* Action Buttons */}
@@ -71,6 +71,17 @@ export default function CleanHero() {
           >
             <span>Code Studio</span>
             <Terminal className="w-4 h-4 text-zinc-300" />
+          </a>
+
+          <a
+            href="/Garbita_Chowdhury_Resume.pdf"
+            download="Garbita_Chowdhury_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 sm:px-7 sm:py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white text-xs sm:text-sm font-semibold hover:bg-white/10 hover:border-white/40 transition-colors flex items-center space-x-2 shadow-xl font-mono"
+          >
+            <span>Resume</span>
+            <Download className="w-4 h-4 text-white" />
           </a>
         </motion.div>
 

@@ -46,8 +46,21 @@ export default function NivoraContact() {
           <div className="space-y-4 font-mono text-sm">
             <div className="p-4 rounded-2xl bg-zinc-900/80 border border-white/10 flex items-center justify-between shadow-lg">
               <span className="text-zinc-400">EMAIL</span>
-              <a href="mailto:garbita1712@gmail.com" className="font-bold text-white underline hover:text-zinc-300 transition-colors">
-                garbita1712@gmail.com
+              <a href="mailto:garbita.chowdhury1712@gmail.com" className="font-bold text-white underline hover:text-zinc-300 transition-colors">
+                garbita.chowdhury1712@gmail.com
+              </a>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-zinc-900/80 border border-white/10 flex items-center justify-between shadow-lg">
+              <span className="text-zinc-400">LINKEDIN</span>
+              <a
+                href="https://www.linkedin.com/in/garbita-chowdhury-387548383?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-white underline flex items-center space-x-1 hover:text-zinc-300 transition-colors"
+              >
+                <span>garbita-chowdhury</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
@@ -65,22 +78,17 @@ export default function NivoraContact() {
             </div>
 
             <div className="p-4 rounded-2xl bg-zinc-900/80 border border-white/10 flex items-center justify-between shadow-lg">
+              <span className="text-zinc-400">PHONE</span>
+              <a href="tel:+919007946673" className="font-bold text-white hover:text-zinc-300 transition-colors">
+                +91 9007946673
+              </a>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-zinc-900/80 border border-white/10 flex items-center justify-between shadow-lg">
               <span className="text-zinc-400">LOCATION</span>
-              <span className="font-bold text-white">Kalyani / Kolkata, WB, India</span>
+              <span className="font-bold text-white">Kolkata, India</span>
             </div>
           </div>
-
-          {/* Signature Card */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="nivora-card p-6 rounded-3xl flex items-center justify-between border border-white/10 shadow-2xl"
-          >
-            <div>
-              <div className="text-xs text-zinc-500 font-mono uppercase tracking-widest">Official Signature</div>
-              <div className="text-3xl font-signature text-white mt-1 signature-glow">Garbita Chowdhury</div>
-              <div className="text-xs text-zinc-400 font-mono mt-0.5">Full-Stack Architect &amp; AI Engineer</div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Right Column Form Box */}

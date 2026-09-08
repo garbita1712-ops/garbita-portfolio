@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Garbita Chowdhury | Full-Stack Architect & AI Engineer",
+  title: "Garbita Chowdhury | Full-Stack Developer",
   description:
-    "B.Tech CSE Student at Kalyani Govt. Engineering College (KGEC), Winner of SIH Internal Hackathon, WBJEE Rank 1102. Full-stack Web Developer specializing in TypeScript, Next.js 16, PyTorch, and AI Risk Systems.",
+    "B.Tech CSE Student at Kalyani Govt. Engineering College (KGEC), Winner of SIH Hackathon, WBJEE Rank 1102. Full-Stack Developer specializing in Next.js 16, React 19, TypeScript, Node.js, and modern web architectures.",
   keywords: [
     "Garbita Chowdhury",
     "KGEC",

@@ -88,7 +88,8 @@ export default function TerminalCLI() {
       case "contact":
         res = (
           <div className="space-y-1 text-gray-300">
-            <div>📧 Email: <a href="#contact" className="text-cyan-400 underline">garbita1712@gmail.com</a></div>
+            <div>📧 Email: <a href="mailto:garbita.chowdhury1712@gmail.com" className="text-cyan-400 underline">garbita.chowdhury1712@gmail.com</a></div>
+            <div>💼 LinkedIn: <a href="https://www.linkedin.com/in/garbita-chowdhury-387548383?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" className="text-cyan-400 underline">linkedin.com/in/garbita-chowdhury</a></div>
             <div>🐙 GitHub: <a href="https://github.com/garbita1712-ops" target="_blank" className="text-cyan-400 underline">github.com/garbita1712-ops</a></div>
           </div>
         );

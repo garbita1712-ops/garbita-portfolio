@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Sparkles, Download } from "lucide-react";
 
 export default function CleanAbout() {
   return (
@@ -25,7 +25,7 @@ export default function CleanAbout() {
             About
           </h2>
           <p className="text-zinc-300 text-lg max-w-lg leading-relaxed font-light">
-            Computer Science Engineer, SIH 2026 Winner, and Full-Stack AI Developer.
+            Full-Stack Developer &amp; Computer Science Engineer building robust web systems.
           </p>
         </motion.div>
 
@@ -45,39 +45,39 @@ export default function CleanAbout() {
             </div>
 
             <h3 className="text-3xl sm:text-4xl font-bold text-white leading-snug">
-              Building high-precision telemetry models &amp; production web systems.
+              Crafting scalable full-stack web applications &amp; intelligent software.
             </h3>
 
             <p className="text-zinc-300 leading-relaxed font-light text-base sm:text-lg">
-              I am <strong className="text-white font-semibold">Garbita Chowdhury</strong>, a Computer Science &amp; Engineering student at <strong className="text-white font-semibold">Kalyani Government Engineering College (KGEC)</strong>. I specialize in building end-to-end full-stack web platforms, machine learning hazard risk engines, and cross-platform mobile telemetry dashboards.
+              I am <strong className="text-white font-semibold">Garbita Chowdhury</strong>, a passionate <strong className="text-white font-semibold">Full-Stack Developer</strong> and Computer Science &amp; Engineering student at <strong className="text-white font-semibold">Kalyani Government Engineering College (KGEC)</strong>. I specialize in building responsive modern frontends, scalable backend APIs, and end-to-end production web platforms.
             </p>
 
             <p className="text-zinc-300 leading-relaxed font-light text-base">
-              Winner of the <strong className="text-white font-bold">Smart India Hackathon 2026</strong> for developing <strong className="text-white">NER-SHIELD</strong>, an AI-based early warning landslide risk engine (Problem Statement ID 26001). Achieved state rank <strong className="text-white">1102</strong> in WBJEE. Beyond software architecture, I actively pursue AI research, graphic design, and developer community leadership.
+              My core stack covers <strong className="text-white">Next.js 16</strong>, <strong className="text-white">React 19</strong>, <strong className="text-white">TypeScript</strong>, <strong className="text-white">Node.js</strong>, <strong className="text-white">FastAPI</strong>, and modern databases (<strong className="text-white">PostgreSQL &amp; MongoDB</strong>). Winner of the prestigious <strong className="text-white font-bold">Smart India Hackathon 2026</strong> for developing <strong className="text-white">NER-SHIELD</strong> (PS ID 26001) and secured WBJEE rank <strong className="text-white">1102</strong>.
             </p>
 
             {/* Core Strengths Bullet Points */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-zinc-300">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
-                <span>Next.js 16 &amp; TypeScript</span>
+                <span>Next.js 16, React 19 &amp; TypeScript</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
-                <span>PyTorch Risk Inference</span>
+                <span>Node.js &amp; FastAPI Backends</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
-                <span>FastAPI GIS Microservices</span>
+                <span>PostgreSQL, MongoDB &amp; ORMs</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-white flex-shrink-0" />
-                <span>Flutter Mobile Dashboards</span>
+                <span>RESTful APIs &amp; Cloud Deployment</span>
               </div>
             </div>
 
             {/* Action Row */}
-            <div className="pt-6 flex flex-wrap items-center gap-6">
+            <div className="pt-6 flex flex-wrap items-center gap-4 sm:gap-6">
               <a
                 href="#contact"
                 className="px-7 py-3 rounded-full bg-white text-black text-xs font-bold hover:bg-zinc-200 transition-colors flex items-center gap-2 shadow-2xl"
@@ -86,9 +86,20 @@ export default function CleanAbout() {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
+              <a
+                href="/Garbita_Chowdhury_Resume.pdf"
+                download="Garbita_Chowdhury_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-zinc-900 border border-white/15 text-white text-xs font-mono hover:bg-zinc-800 transition-colors flex items-center gap-2"
+              >
+                <Download className="w-3.5 h-3.5 text-zinc-300" />
+                <span>Download Resume</span>
+              </a>
+
               <div className="flex items-center gap-2 font-mono text-xs text-zinc-400">
                 <Sparkles className="w-4 h-4 text-white animate-pulse" />
-                <span>KGEC B.Tech CSE · SIH 2026 Winner</span>
+                <span>KGEC B.Tech CSE · Full-Stack Developer</span>
               </div>
             </div>
           </motion.div>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles, Download } from "lucide-react";
 import Github from "./GithubIcon";
+import Linkedin from "./LinkedinIcon";
 
 export default function CleanNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,7 +17,7 @@ export default function CleanNavbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
 
-      const sections = ["hero", "about", "work", "code", "skills", "contact"];
+      const sections = ["hero", "about", "work", "code", "skills", "achievements", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -49,6 +51,7 @@ export default function CleanNavbar() {
     { id: "work", label: "Work", href: "#work" },
     { id: "code", label: "Code Studio", href: "#code" },
     { id: "skills", label: "Skills", href: "#skills" },
+    { id: "achievements", label: "Achievements", href: "#achievements" },
     { id: "contact", label: "Contact", href: "#contact" },
   ];
 
@@ -63,32 +66,32 @@ export default function CleanNavbar() {
         }`}
       >
         <div
-          className={`mx-auto transition-all duration-500 flex items-center justify-between ${
+          className={`mx-auto transition-all duration-500 flex items-center justify-between gap-3 lg:gap-6 flex-nowrap ${
             scrolled
-              ? "max-w-4xl py-3 px-6 rounded-full bg-zinc-950/80 backdrop-blur-2xl border border-white/12 shadow-[0_10px_40px_rgba(0,0,0,0.8),0_0_20px_rgba(255,255,255,0.05)]"
-              : "max-w-6xl py-2 px-4 bg-transparent border-b border-white/5"
+              ? "max-w-6xl py-2.5 px-5 sm:px-6 rounded-full bg-zinc-950/85 backdrop-blur-2xl border border-white/12 shadow-[0_10px_40px_rgba(0,0,0,0.8),0_0_20px_rgba(255,255,255,0.05)]"
+              : "max-w-7xl py-3 px-4 sm:px-6 bg-transparent border-b border-white/5"
           }`}
         >
           {/* Brand Logo & Signature */}
-          <a href="#hero" className="flex items-center space-x-2 group select-none">
-            <span className="text-2xl sm:text-3xl font-signature text-white tracking-wide signature-glow group-hover:text-zinc-200 transition-colors">
+          <Link href="/#hero" className="flex items-center space-x-2 group select-none flex-shrink-0">
+            <span className="text-xl sm:text-2xl lg:text-3xl font-signature text-white tracking-wide signature-glow group-hover:text-zinc-200 transition-colors whitespace-nowrap">
               Garbita Chowdhury
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Floating Pill Nav Items */}
-          <nav className="hidden md:flex items-center space-x-1 relative px-3 py-1.5 rounded-full bg-zinc-900/60 border border-white/5 backdrop-blur-md select-none">
+          <nav className="hidden md:flex items-center space-x-0.5 lg:space-x-1 relative px-2.5 lg:px-3 py-1.5 rounded-full bg-zinc-900/60 border border-white/5 backdrop-blur-md select-none flex-shrink-0">
             {navItems.map((item) => {
               const isHovered = hoveredNav === item.id;
               const isActive = activeSection === item.id;
 
               return (
-                <a
+                <Link
                   key={item.id}
                   href={item.href}
                   onMouseEnter={() => setHoveredNav(item.id)}
                   onMouseLeave={() => setHoveredNav(null)}
-                  className={`relative px-4 py-1.5 text-xs font-mono font-medium transition-colors duration-200 z-10 ${
+                  className={`relative px-2.5 lg:px-3.5 py-1.5 text-xs font-mono font-medium transition-colors duration-200 z-10 whitespace-nowrap select-none ${
                     isActive || isHovered ? "text-white" : "text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
@@ -110,34 +113,57 @@ export default function CleanNavbar() {
                     />
                   )}
 
-                  <span>{item.label}</span>
-                </a>
+                  <span className="font-mono whitespace-nowrap">{item.label}</span>
+                </Link>
               );
             })}
           </nav>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-2.5 flex-shrink-0 whitespace-nowrap">
             <a
               href="https://github.com/garbita1712-ops"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-all border border-transparent hover:border-white/10"
+              className="p-2 rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-all border border-transparent hover:border-white/10 flex-shrink-0"
               title="GitHub Profile"
             >
               <Github className="w-4 h-4" />
             </a>
 
-            <motion.a
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
-              href="#contact"
-              className="hidden sm:flex px-4 py-2 rounded-full bg-white text-black text-xs font-semibold hover:bg-zinc-200 transition-all items-center space-x-1.5 shadow-[0_0_20px_rgba(255,255,255,0.25)] border border-white"
+            <a
+              href="https://www.linkedin.com/in/garbita-chowdhury-387548383?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full text-zinc-400 hover:text-white hover:bg-white/10 transition-all border border-transparent hover:border-white/10 flex-shrink-0"
+              title="LinkedIn Profile"
             >
-              <Sparkles className="w-3 h-3 text-black animate-pulse" />
-              <span>Get in Touch</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </motion.a>
+              <Linkedin className="w-4 h-4" />
+            </a>
+
+            {/* Resume Download Button */}
+            <a
+              href="/Garbita_Chowdhury_Resume.pdf"
+              download="Garbita_Chowdhury_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/15 hover:border-white/30 text-xs font-mono text-zinc-300 hover:text-white transition-all shadow-sm whitespace-nowrap flex-shrink-0"
+              title="Download Resume (PDF)"
+            >
+              <Download className="w-3.5 h-3.5 text-zinc-300 flex-shrink-0" />
+              <span className="font-mono whitespace-nowrap">Resume</span>
+            </a>
+
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} className="flex-shrink-0">
+              <Link
+                href="/#contact"
+                className="hidden sm:inline-flex px-3.5 lg:px-4 py-2 rounded-full bg-white text-black text-xs font-semibold hover:bg-zinc-200 transition-all items-center space-x-1.5 shadow-[0_0_20px_rgba(255,255,255,0.25)] border border-white whitespace-nowrap flex-shrink-0"
+              >
+                <Sparkles className="w-3 h-3 text-black animate-pulse flex-shrink-0" />
+                <span className="font-mono font-bold whitespace-nowrap">Get in Touch</span>
+                <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0" />
+              </Link>
+            </motion.div>
 
             {/* Clean Transparent Burger Button (No Black Box, No Blinking Dot) */}
             <motion.button
@@ -203,37 +229,51 @@ export default function CleanNavbar() {
                 {/* Nav Links List */}
                 <nav className="flex flex-col space-y-3 font-mono text-sm">
                   {navItems.map((item, idx) => (
-                    <motion.a
+                    <motion.div
                       key={item.id}
-                      href={item.href}
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 + idx * 0.06 }}
-                      onClick={() => setMobileOpen(false)}
-                      className={`px-4 py-3.5 rounded-2xl border transition-all flex items-center justify-between ${
-                        activeSection === item.id
-                          ? "bg-white text-black font-bold border-white"
-                          : "bg-zinc-900/70 border-white/10 text-zinc-300 hover:text-white hover:border-white/30"
-                      }`}
                     >
-                      <span>{item.label}</span>
-                      <ArrowUpRight className="w-4 h-4" />
-                    </motion.a>
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`px-4 py-3.5 rounded-2xl border transition-all flex items-center justify-between ${
+                          activeSection === item.id
+                            ? "bg-white text-black font-bold border-white"
+                            : "bg-zinc-900/70 border-white/10 text-zinc-300 hover:text-white hover:border-white/30"
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        <ArrowUpRight className="w-4 h-4" />
+                      </Link>
+                    </motion.div>
                   ))}
                 </nav>
               </div>
 
               {/* Drawer Footer CTA */}
-              <div className="space-y-4 pt-6 border-t border-white/10">
+              <div className="space-y-3 pt-6 border-t border-white/10">
                 <a
-                  href="#contact"
+                  href="/Garbita_Chowdhury_Resume.pdf"
+                  download="Garbita_Chowdhury_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-2xl bg-zinc-900 border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg"
+                >
+                  <Download className="w-4 h-4 text-white" />
+                  <span>Download Resume (PDF)</span>
+                </a>
+
+                <Link
+                  href="/#contact"
                   onClick={() => setMobileOpen(false)}
                   className="w-full py-3.5 rounded-2xl bg-white text-black font-bold text-xs flex items-center justify-center gap-2 shadow-xl"
                 >
                   <Sparkles className="w-4 h-4 text-black animate-pulse" />
                   <span>Get in Touch</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </a>
+                </Link>
 
                 <div className="text-center font-mono text-[11px] text-zinc-500">
                   © 2026 Garbita Chowdhury
